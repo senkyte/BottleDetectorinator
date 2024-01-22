@@ -1,4 +1,4 @@
-keras == 3.0.4
+keras == 2.15.0
 pillow == 10.2.0
 numpy == 1.26.0
 tensorflow == 2.15.0
