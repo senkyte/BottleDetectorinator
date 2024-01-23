@@ -45,7 +45,7 @@ class_name = class_names[index]
 confidence_score = prediction[0][index]
 
 # Print prediction and confidence score
-print("Class:", class_name[2:], end="")
-print("Confidence Score:", confidence_score)
+st.write("Class:", class_name[2:], end="")
+st.write("Confidence Score:", confidence_score)
 
 # Here is where the Teachable Machine code ends.
