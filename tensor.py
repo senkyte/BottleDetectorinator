@@ -4,6 +4,11 @@ import numpy as np
 import streamlit as st
 import numpy as np
 
+st.title("BottleRecogniserInator!")
+st.header("More about the BottleRecogniserInator")
+st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
+
+# This code is credited to Teachable Machine
 # Disable scientific notation for clarity
 np.set_printoptions(suppress=True)
 
@@ -42,3 +47,5 @@ confidence_score = prediction[0][index]
 # Print prediction and confidence score
 print("Class:", class_name[2:], end="")
 print("Confidence Score:", confidence_score)
+
+# Here is where the Teachable Machine code ends.
