@@ -37,10 +37,10 @@ if img_file is not None: # Why is this a condition? Because Streamlit would cons
     np.set_printoptions(suppress=True)
 
     # Load the model
-    model = load_model("/Users/alexanderkoh/Downloads/python2/keras_model.h5", compile=False)
+    model = load_model("keras_model.h5", compile=False)
 
     # Load the labels
-    class_names = open("/Users/alexanderkoh/Downloads/python2/labels.txt", "r").readlines()
+    class_names = open("labels.txt", "r").readlines()
 
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
