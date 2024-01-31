@@ -3,11 +3,13 @@ from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
 import streamlit as st
 import numpy as np
+import time
 
 st.title("BottleRecogniserInator!")
+
 st.header("More about the BottleRecogniserInator")
 st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
-
+st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
 from PIL import Image
 import io
@@ -27,8 +29,7 @@ def bytesio_to_png(bytesio):
     
     return png_data
 
-img_file = st.camera_input("Take a picture")
-
+img_file = st.camera_input("Take a picture of the water bottle")
 if img_file is not None: # Why is this a condition? Because Streamlit would constantly refresh and run the code, leading to a really ugly error that appears when no input is given, and is treated as None type. Adjust all codes accordingly.
     img_file = bytesio_to_png(img_file)
     # This code is credited to Teachable Machine
@@ -36,10 +37,10 @@ if img_file is not None: # Why is this a condition? Because Streamlit would cons
     np.set_printoptions(suppress=True)
 
     # Load the model
-    model = load_model("keras_model.h5", compile=False)
+    model = load_model("/Users/alexanderkoh/Downloads/python2/keras_model.h5", compile=False)
 
     # Load the labels
-    class_names = open("labels.txt", "r").readlines()
+    class_names = open("/Users/alexanderkoh/Downloads/python2/labels.txt", "r").readlines()
 
     # Create the array of the right shape to feed into the keras model
     # The 'length' or number of images you can put into the array is
@@ -67,8 +68,17 @@ if img_file is not None: # Why is this a condition? Because Streamlit would cons
     class_name = class_names[index]
     confidence_score = prediction[0][index]
 
-    # Print prediction and confidence score
-    st.write("Class:", class_name[2:], end="")
-    st.write("Confidence Score:", confidence_score)
+  # Here is where the Teachable Machine code ends.
+    if confidence_score > 0.9: #Checks the confidence score, to ensure accuracy and reliability.
+        if class_name[2:-1] == "Clean": # So the text file is a tad bit annoying, therefore I have to slice some funny stuff.
+            st.write("Accepted!")
+        elif "Dirty" == class_name[2:-1]: 
+            st.write("Your bottle is dirty! Please clean it before depositing.")
+        elif class_name[2:] == "NOT A BOTTLE": 
+            st.write("Invalid object! Please insert a clear plastic bottle!")
+        else:
+            st.write("Error code 404, I messed something up.") # A check to make sure the code is working.
+    else:
+        st.write("The machine is not confident, please retake the photo!")
 
-    # Here is where the Teachable Machine code ends.
+
