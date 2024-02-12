@@ -11,6 +11,11 @@ st.header("More about the BottleRecogniserInator")
 st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
 st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
+st.set_page_config(
+    page_title = "Multipage App",
+    page_icon = "♻️",
+)
+
 from PIL import Image
 import io
 def bytesio_to_png(bytesio):
