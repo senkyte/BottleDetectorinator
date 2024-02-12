@@ -1,3 +1,6 @@
+# This code was written by Alexander Koh
+# The clean bottle dataset used was gathered by Alexander Koh, and trained in Teachable Machine.
+# The dirty bottle dataset was a public dataset.
 from keras.models import load_model  # TensorFlow is required for Keras to work
 from PIL import Image, ImageOps  # Install pillow instead of PIL
 import numpy as np
@@ -5,12 +8,12 @@ import streamlit as st
 import numpy as np
 import time
 st.set_page_config(
-    page_title = "Multipage App",
+    page_title = "The BottleDectectorInator",
     page_icon = "!",
 )
-st.title("BottleRecogniserInator!")
+st.title("BottleDetectorInator!")
 
-st.header("More about the BottleRecogniserInator")
+st.header("More about the BottleDetectorInator")
 st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
 st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
@@ -36,7 +39,7 @@ def bytesio_to_png(bytesio):
 img_file = st.camera_input("Take a picture of the water bottle")
 if img_file is not None: # Why is this a condition? Because Streamlit would constantly refresh and run the code, leading to a really ugly error that appears when no input is given, and is treated as None type. Adjust all codes accordingly.
     img_file = bytesio_to_png(img_file)
-    # This code is credited to Teachable Machine
+    # This portion of the code is credited to Teachable Machine
     # Disable scientific notation for clarity
     np.set_printoptions(suppress=True)
 
