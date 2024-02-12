@@ -13,7 +13,7 @@ st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
 st.set_page_config(
     page_title = "Multipage App",
-    page_icon = "♻️",
+    page_icon = "!",
 )
 
 from PIL import Image
