@@ -4,17 +4,16 @@ import numpy as np
 import streamlit as st
 import numpy as np
 import time
-
+st.set_page_config(
+    page_title = "Multipage App",
+    page_icon = "!",
+)
 st.title("BottleRecogniserInator!")
 
 st.header("More about the BottleRecogniserInator")
 st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
 st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
-st.set_page_config(
-    page_title = "Multipage App",
-    page_icon = "!",
-)
 
 from PIL import Image
 import io
