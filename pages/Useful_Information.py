@@ -1,5 +1,5 @@
 import streamlit as st
-
+# This entire code is written by Lee Rey Jien
 st.title("Useful Information")
 st.write("""Recycling rates in the world remain very low due to a lack of
 awareness and reluctance to carry out these practices. Here are some
