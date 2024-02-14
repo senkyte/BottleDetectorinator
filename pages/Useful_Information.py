@@ -85,7 +85,7 @@ with st.expander("Malaysia"):
 be noted that the government of Malaysia is aiming to reach a 40% recycling rate
 by 2025.
 """)
-    st.write("Source: Bernama. (2022, March 10). Can Malaysia achieve 40 per cent recycling rate by 2025?. New Straits Times, Nation. Retrieved from https://www.nst.com.my/news/nation/2022/03/778625/can-malaysia-achieve-40-cent-recycling-rate-2025")
+    st.write("Reference: Bernama. (2022, March 10). Can Malaysia achieve 40 per cent recycling rate by 2025?. New Straits Times, Nation. Retrieved from https://www.nst.com.my/news/nation/2022/03/778625/can-malaysia-achieve-40-cent-recycling-rate-2025")
 
 with st.expander("Japan"):
     st.write("""Japan has a very strong recycling culture that lends to its
@@ -111,4 +111,4 @@ efforts that are taken like implementing a domestic waste sorting system for
 Shanghai where residents sort their waste into four categories: wet garbage,
 dry garbage, recyclable waste and hazardous waste.
 """)
-    st.write("Source: C. Smith. (2021, Aug 27). After China’s Recyclable Ban, Municipalities Shift Gears. Retrieved fromhttps://www.governing.com/now/after-chinas-recyclable-ban-municipalities-shift-gears")
+    st.write("Reference: C. Smith. (2021, Aug 27). After China’s Recyclable Ban, Municipalities Shift Gears. Retrieved fromhttps://www.governing.com/now/after-chinas-recyclable-ban-municipalities-shift-gears")
