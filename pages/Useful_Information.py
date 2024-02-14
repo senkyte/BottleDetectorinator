@@ -111,4 +111,4 @@ efforts that are taken like implementing a domestic waste sorting system for
 Shanghai where residents sort their waste into four categories: wet garbage,
 dry garbage, recyclable waste and hazardous waste.
 """)
-    st.write("Reference: C. Smith. (2021, Aug 27). After China’s Recyclable Ban, Municipalities Shift Gears. Retrieved fromhttps://www.governing.com/now/after-chinas-recyclable-ban-municipalities-shift-gears")
+    st.write("Reference: C. Smith. (2021, Aug 27). After China’s Recyclable Ban, Municipalities Shift Gears. Retrieved from https://www.governing.com/now/after-chinas-recyclable-ban-municipalities-shift-gears")
