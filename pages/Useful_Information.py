@@ -78,12 +78,14 @@ Non-Recyclable:
 These are the general categories of items for recycling in Singapore but there
 are its exceptions.
 """)
+    st.write("Reference: NEA. (n.d.). Recycling Guide_V05. Retrieved from https://www.nea.gov.sg/docs/default-source/our-services/waste-management/list-of-items-that-are-recyclable-and-not.pdf")
 
 with st.expander("Malaysia"):
     st.write("""Similarly, the recycling culture in Malaysia is poor. It should
 be noted that the government of Malaysia is aiming to reach a 40% recycling rate
 by 2025.
 """)
+    st.write("Source: Bernama. (2022, March 10). Can Malaysia achieve 40 per cent recycling rate by 2025?. New Straits Times, Nation. Retrieved from https://www.nst.com.my/news/nation/2022/03/778625/can-malaysia-achieve-40-cent-recycling-rate-2025")
 
 with st.expander("Japan"):
     st.write("""Japan has a very strong recycling culture that lends to its
@@ -95,6 +97,7 @@ However, these rates only apply to plastic items. Japan's overall recycling rate
 is low, with glass and paper being recycled less. In 2020, the overall recycling
 rate reached only 20%.
 """)
+    st.write("Reference: A. Carne. (2023, April 5). What a Load of Rubbish: Recycling in Japan. Retrieved from https://www.tokyoweekender.com/japan-life/recycling-in-japan/")
 
 with st.expander("China"):
     st.write("""China has traditionally been the centre for recycling until
@@ -108,3 +111,4 @@ efforts that are taken like implementing a domestic waste sorting system for
 Shanghai where residents sort their waste into four categories: wet garbage,
 dry garbage, recyclable waste and hazardous waste.
 """)
+    st.write("Source: C. Smith. (2021, Aug 27). After China’s Recyclable Ban, Municipalities Shift Gears. Retrieved fromhttps://www.governing.com/now/after-chinas-recyclable-ban-municipalities-shift-gears")
