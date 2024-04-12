@@ -76,6 +76,17 @@ if img_file is not None: # Why is this a condition? Because Streamlit would cons
     confidence_score = prediction[0][index]
 
     st.write(confidence_score)
+    if confidence_score > 0: #Checks the confidence score, to ensure accuracy and reliability.
+        if class_name[2:-1] == "Clean": # So the text file is a tad bit annoying, therefore I have to slice some funny stuff.
+            st.write("Accepted!")
+        elif "Dirty" == class_name[2:-1]: 
+            st.write("Your bottle is dirty! Please clean it before depositing.")
+        elif class_name[2:] == "NOT A BOTTLE": 
+            st.write("Invalid object! Please insert a clear plastic bottle!")
+        else:
+            st.write("Error code 404, I messed something up.") # A check to make sure the code is working.
+    else:
+        st.write("The machine is not confident, please retake the photo!")
   # Here is where the Teachable Machine code ends.
     if confidence_score > 0.75: #Checks the confidence score, to ensure accuracy and reliability.
         if class_name[2:-1] == "Clean": # So the text file is a tad bit annoying, therefore I have to slice some funny stuff.
