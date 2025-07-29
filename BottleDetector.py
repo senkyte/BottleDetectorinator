@@ -14,7 +14,7 @@ st.set_page_config(
 st.title("BottleDetectorInator!")
 
 st.header("More about the BottleDetectorInator")
-st.markdown("This image recognition was training in Teachable Machine, and TensorFlow is used for the code.")
+st.markdown("This image recognition was trained in Teachable Machine, and TensorFlow is used for the code.")
 st.markdown("Please take a photo of your bottle, and watch the magic happen!")
 
 
